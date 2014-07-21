@@ -11,7 +11,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="GlutMan.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GlutMan.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C03258C7-14E0-4FE6-93C1-3C1CB0F51E52}</ProjectGuid>

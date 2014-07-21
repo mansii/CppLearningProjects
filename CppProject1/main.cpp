@@ -3,6 +3,7 @@
 #include<conio.h>
 #include<GL/gl.h>
 #include"glut.h"
+#include "GlutMan.h"
 
 void display()
 {
@@ -53,33 +54,23 @@ void quaddisplay()
 
 
 
-void initialize()
-{
-	glMatrixMode(GL_PROJECTION);
-	glViewport(0, 0, 640, 480);
-	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-	
-	gluPerspective(45, 640.0 / 480.0, 1, 500);
-	glMatrixMode(GL_MODELVIEW);
-	glClearDepth(1.0f);
-	glClearColor(0.0, 0.0, 0.0, 1.0);
 
-}
 int main(int argc,char **argv)
 {
 	printf("Hello world");
-	
-
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
 
-	glutInitWindowSize(640, 480);
-	glutCreateWindow("testing");
 
+
+	GlutMan gMan1(1400,700);
+	gMan1.init();
+	
+
+	
 	glutDisplayFunc(quaddisplay);
 	glutIdleFunc(quaddisplay);
-	initialize();
+	
 
 	glutMainLoop();
 	getch();
