@@ -8,19 +8,19 @@
 void display()
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	glLoadIdentity();
-	glTranslatef(0, 0, -3);
+	//glLoadIdentity();
+	glTranslatef(0, 0, 0);
 
 	glBegin(GL_TRIANGLES);
 
 	glColor3d(1, 0, 0);
-	glVertex3f(3, -5, 8);
+	glVertex3f(0.5, 0, 0);
 
 	glColor3d(1, 1, 1);
-	glVertex3f(0, -6, -10);
+	glVertex3f(0, 1, 0);
 
 	glColor3d(1, 0, 1);
-	glVertex3f(5, 0, -19);
+	glVertex3f(1, 1, 0);
 
 	glEnd();
 	glutSwapBuffers();
@@ -30,7 +30,7 @@ void quaddisplay()
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glLoadIdentity();
-	glTranslatef(0, 0, -3);
+	//glTranslatef(0, 0, -3);
 	
 	glBegin(GL_QUADS);
 
@@ -63,13 +63,13 @@ int main(int argc,char **argv)
 
 
 
-	GlutMan gMan1(1400,700);
+	GlutMan gMan1(1200,200);
 	gMan1.init();
 	
 
 	
-	glutDisplayFunc(quaddisplay);
-	glutIdleFunc(quaddisplay);
+	glutDisplayFunc(display);
+	glutIdleFunc(display);
 	
 
 	glutMainLoop();
