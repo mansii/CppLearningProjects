@@ -65,6 +65,25 @@ private:
 };
 
 
+class MyCircle : public Shape
+{
+public:
+	MyCircle(float _cx, float _cy, float _cr);
+	virtual ~MyCircle();
+
+
+	virtual void draw();
+
+private:
+	float mCx;
+	float mCy;
+	float mCr;
+
+
+
+
+};
+
 
 
 

@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include<GL/gl.h>
 #include"glut.h"
+#include <math.h>
 
 
 Shape::Shape()
@@ -125,5 +126,43 @@ void MySquare::draw()
 
 	glColor3d(0.1, 0.3, .2222);
 	glVertex3f(mSx, mSy + mSs, 0);
+	glEnd();
+}
+
+MyCircle::MyCircle(float _cx, float _cy, float _cr)
+{
+	mCx = _cx;
+	mCy = _cy;
+	mCr = _cr;
+
+	printf("\nCalling circle constructor");
+
+}
+
+MyCircle::~MyCircle()
+{
+	printf("\nCalling circle destructor");
+
+}
+
+void MyCircle::draw()
+{
+	float x1, y1, x2, y2;
+	float angle;
+	double radius = mCr;
+
+	x1 = mCx, y1 = mCy;
+	glColor3f(1.0, 1.0, 0.6);
+
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex2f(x1, y1);
+
+	for (angle = 1.0f; angle < 361.0f; angle += 0.2)
+	{
+		x2 = x1 + sin(angle)*radius;
+		y2 = y1 + cos(angle)*radius;
+		glVertex2f(x2, y2);
+	}
+
 	glEnd();
 }

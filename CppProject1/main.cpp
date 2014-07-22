@@ -12,7 +12,7 @@ MyRectangle g_r1(0.6, 0.2, 0.3, 0.6);
 
 MySquare g_s1(0.2, 0.2, 0.3);
 
-//MyCircle g_c1(0.8, 0.8, 0.1)
+MyCircle g_c1(0.3, 0.8, 0.1);
 
 void display()
 {
@@ -21,7 +21,7 @@ void display()
 	g_t1.draw();
 	g_r1.draw();
 	g_s1.draw();
-	//g_c1.draw();
+	g_c1.draw();
  
 	
 
