@@ -36,7 +36,7 @@ void GlutMan::init()
 	//gluPerspective(45, 640.0 / 480.0, 1, 500);
 	glMatrixMode(GL_PROJECTION);
 	glViewport(0, 0, mWindowWidth, mWindowHeight);
-	glOrtho(0.0, 1.0, 1.0, 0.0, 1.0, -1.0);
+	glOrtho(0.0, 1.0, 0.0, 1.0, 1.0, -1.0);
 
 	glClearDepth(1.0f);
 	glClearColor(0.0, 0.0, 0.0, 1.0);

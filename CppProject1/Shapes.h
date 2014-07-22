@@ -14,10 +14,16 @@ public:
 class MyRectangle : public Shape
 { 
 public:
-	MyRectangle();
+	MyRectangle(float _x, float _y,float _w,float _h);
 	virtual ~MyRectangle();
 
 	virtual void draw();
+
+private:
+	float mX;
+	float mY;
+	float mW;
+	float mH;
 
 
 };
@@ -25,11 +31,35 @@ public:
 class MyTriangle : public Shape
 {
 public:
-	MyTriangle();
+	MyTriangle(float _tx, float _ty, float _tw, float _th);
 	 virtual ~MyTriangle();
 	
 
 	virtual void draw();
+
+private:
+	float mTx;
+	float mTy;
+	float mTw;
+	float mTh;
+
+
+
+};
+
+class MySquare : public Shape
+{
+public:
+	MySquare(float _sx, float _sy, float _ss);
+	virtual ~MySquare();
+
+	virtual void draw();
+
+private:
+	float mSx;
+	float mSy;
+	float mSs;
+	
 
 
 };
