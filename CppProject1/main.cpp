@@ -4,25 +4,14 @@
 #include<GL/gl.h>
 #include"glut.h"
 #include "GlutMan.h"
+#include "Shapes.h"
+
+MyTriangle g_t1;
 
 void display()
 {
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	//glLoadIdentity();
-	glTranslatef(0, 0, 0);
-
-	glBegin(GL_TRIANGLES);
-
-	glColor3d(1, 0, 0);
-	glVertex3f(0.5, 0, 0);
-
-	glColor3d(1, 1, 1);
-	glVertex3f(0, 1, 0);
-
-	glColor3d(1, 0, 1);
-	glVertex3f(1, 1, 0);
-
-	glEnd();
+	g_t1.draw();
+	
 	glutSwapBuffers();
 }
 
@@ -65,7 +54,12 @@ int main(int argc,char **argv)
 
 	GlutMan gMan1(1200,200);
 	gMan1.init();
+	 
 	
+	glutDisplayFunc(display);
+	glutIdleFunc(display);
+	
+
 
 	
 	glutDisplayFunc(display);
