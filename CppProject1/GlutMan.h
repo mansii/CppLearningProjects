@@ -5,19 +5,19 @@ class GlutMan
 {
 public:
 
-	GlutMan();
-	GlutMan(int _windowWidth, int _windowHeight);
-	virtual ~GlutMan();
+  GlutMan();
+  GlutMan(int _windowWidth, int _windowHeight);
+  virtual ~GlutMan();
 
-	void init();
-	void close() {}
+  void init();
+  void close() {}
 
 
 private:
-	int mWindowWidth;
-	int mWindowHeight;
-	
-	
+  int mWindowWidth;
+  int mWindowHeight;
+
+
 
 
 

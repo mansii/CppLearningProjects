@@ -4,26 +4,26 @@
 class Shape
 {
 public:
-	Shape();
-	virtual ~Shape();
+  Shape();
+  virtual ~Shape();
 
-	virtual void draw() = 0;
+  virtual void draw() = 0;
 
 };
 
 class MyRectangle : public Shape
-{ 
+{
 public:
-	MyRectangle(float _x, float _y,float _w,float _h);
-	virtual ~MyRectangle();
+  MyRectangle(float _x, float _y, float _w, float _h);
+  virtual ~MyRectangle();
 
-	virtual void draw();
+  virtual void draw();
 
 private:
-	float mX;
-	float mY;
-	float mW;
-	float mH;
+  float mX;
+  float mY;
+  float mW;
+  float mH;
 
 
 };
@@ -31,17 +31,17 @@ private:
 class MyTriangle : public Shape
 {
 public:
-	MyTriangle(float _tx, float _ty, float _tw, float _th);
-	 virtual ~MyTriangle();
-	
+  MyTriangle(float _tx, float _ty, float _tw, float _th);
+  virtual ~MyTriangle();
 
-	virtual void draw();
+
+  virtual void draw();
 
 private:
-	float mTx;
-	float mTy;
-	float mTw;
-	float mTh;
+  float mTx;
+  float mTy;
+  float mTw;
+  float mTh;
 
 
 
@@ -50,16 +50,16 @@ private:
 class MySquare : public Shape
 {
 public:
-	MySquare(float _sx, float _sy, float _ss);
-	virtual ~MySquare();
+  MySquare(float _sx, float _sy, float _ss);
+  virtual ~MySquare();
 
-	virtual void draw();
+  virtual void draw();
 
 private:
-	float mSx;
-	float mSy;
-	float mSs;
-	
+  float mSx;
+  float mSy;
+  float mSs;
+
 
 
 };
@@ -68,16 +68,16 @@ private:
 class MyCircle : public Shape
 {
 public:
-	MyCircle(float _cx, float _cy, float _cr);
-	virtual ~MyCircle();
+  MyCircle(float _cx, float _cy, float _cr);
+  virtual ~MyCircle();
 
 
-	virtual void draw();
+  virtual void draw();
 
 private:
-	float mCx;
-	float mCy;
-	float mCr;
+  float mCx;
+  float mCy;
+  float mCr;
 
 
 
