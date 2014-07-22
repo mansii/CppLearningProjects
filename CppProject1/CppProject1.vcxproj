@@ -61,12 +61,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\manasi\Documents\Sandbox\glut</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\manasi\Documents\Sandbox\CppLearningProjects\glut</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\manasi\Documents\Sandbox\glut</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\manasi\Documents\Sandbox\CppLearningProjects\glut</AdditionalLibraryDirectories>
       <AdditionalDependencies>glut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
