@@ -166,3 +166,51 @@ void MyCircle::draw()
 
   glEnd();
 }
+
+MyLine::MyLine(float _lx1, float _ly1, float _lx2, float _ly2)
+{
+  mLx1 = _lx1;
+  mLy1= _ly1;
+  mLx2 = _lx2;
+  mLy2 = _ly2;
+
+ /* mLx2 = _lx2;
+  mLy2 = _ly2;*/
+
+  printf("\nCalling line constructor");
+
+}
+
+
+MyLine::MyLine(float _lx1, float _ly1, int _length, int _angle)
+{
+  mLx1 = _lx1;
+  mLy1 = _ly1;
+  mLx2 = _length* cos((float)_angle) + mLx1;
+  mLy2 = _length* sin((float)_angle) + mLy1;
+
+  /* mLx2 = _lx2;
+  mLy2 = _ly2;*/
+
+  printf("\nCalling line constructor");
+
+}
+
+MyLine::~MyLine()
+{
+  printf("\nCalling line destructor");
+
+}
+
+void MyLine::draw()
+{
+  //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+  //glLoadIdentity();
+  glTranslatef(0, 0, 0);
+
+  glBegin(GL_LINES);
+  glColor3f(1.0, 1.0, 1.0);
+  glVertex2f(mLx1, mLy1);
+  glVertex2f(mLx2, mLy2);
+  glEnd();
+}

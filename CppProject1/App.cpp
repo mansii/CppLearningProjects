@@ -28,6 +28,9 @@ App::App()
   bool mShowCircle = false;
   mC1 = new MyCircle(0.3, 0.8, 0.1);
 
+  bool mShowLine = false;
+  mL1 = new MyLine(0.25f, 0.25f, 1, 0);
+
   printf("Calling app constructor");
 
 }
@@ -80,6 +83,9 @@ void App::draw()
 
   if (mShowCircle)
     mC1->draw();
+
+  if (mShowLine)
+    mL1->draw();
 }
 
 void App::display()
@@ -107,6 +113,8 @@ void App::processKeyboard(unsigned char key, int mousePositionX, int mousePositi
             mShowRectangle = false;
             mShowSquare = false;
             mShowCircle = false;
+            mShowLine = false;
+
 
   } break;
 
@@ -120,6 +128,9 @@ void App::processKeyboard(unsigned char key, int mousePositionX, int mousePositi
     break;
 
   case 'c':  mShowCircle = true;
+    break;
+
+  case 'l': mShowLine = true;
     break;
 
   default:

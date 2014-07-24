@@ -32,6 +32,8 @@ private:
 
   bool mShowCircle;
   MyCircle* mC1;
-
+ 
+  bool mShowLine;
+  MyLine* mL1;
 };
 #endif

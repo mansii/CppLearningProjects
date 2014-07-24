@@ -78,13 +78,37 @@ private:
   float mCx;
   float mCy;
   float mCr;
-
-
-
-
+  
 };
 
 
+/*class Stickman :public Shape
+{
+public:
+  Stickman(){}
+  virtual ~Stickman(){}
+  virtual void draw(){}
+
+};*/
+
+class MyLine : public Shape
+{
+public:
+  MyLine(float _lx1, float _ly1, float _lx2, float _ly2);
+  MyLine(float _lx1, float _ly1, int _length, int _angle);
+  virtual ~MyLine();
+
+  virtual void draw();
+
+private:
+  float mLx1;
+  float mLy1;
+  float mLx2;
+  float mLy2;
+
+ 
+
+};
 
 
 #endif
