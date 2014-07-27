@@ -95,7 +95,7 @@ class MyLine : public Shape
 {
 public:
   MyLine(float _lx1, float _ly1, float _lx2, float _ly2);
-  MyLine(float _lx1, float _ly1, int _length, int _angle);
+  MyLine(float _lx1, float _ly1, float _length, int _angle, bool _blah);
   virtual ~MyLine();
 
   virtual void draw();

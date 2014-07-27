@@ -26,10 +26,10 @@ App::App()
   mS1 = new MySquare(0.2, 0.2, 0.3);
 
   bool mShowCircle = false;
-  mC1 = new MyCircle(0.3, 0.8, 0.1);
+  mC1 = new MyCircle(0.25, 0.25, 0.1);
 
   bool mShowLine = false;
-  mL1 = new MyLine(0.25f, 0.25f, 1, 0);
+  mL1 = new MyLine(0.25f, 0.25f, 0.1, 45, false);
 
   printf("Calling app constructor");
 

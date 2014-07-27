@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include<GL/gl.h>
 #include"glut.h"
+
+#define _USE_MATH_DEFINES
 #include <math.h>
 
 
@@ -182,12 +184,12 @@ MyLine::MyLine(float _lx1, float _ly1, float _lx2, float _ly2)
 }
 
 
-MyLine::MyLine(float _lx1, float _ly1, int _length, int _angle)
+MyLine::MyLine(float _lx1, float _ly1, float _length, int _angle, bool _blah)
 {
   mLx1 = _lx1;
   mLy1 = _ly1;
-  mLx2 = _length* cos((float)_angle) + mLx1;
-  mLy2 = _length* sin((float)_angle) + mLy1;
+  mLx2 = _length* cos((float)_angle * M_PI / 180.0f) + mLx1;
+  mLy2 = _length* sin((float)_angle * M_PI / 180.0f) + mLy1;
 
   /* mLx2 = _lx2;
   mLy2 = _ly2;*/
@@ -209,7 +211,7 @@ void MyLine::draw()
   glTranslatef(0, 0, 0);
 
   glBegin(GL_LINES);
-  glColor3f(1.0, 1.0, 1.0);
+  glColor3f(0.78, 1.0, 0);
   glVertex2f(mLx1, mLy1);
   glVertex2f(mLx2, mLy2);
   glEnd();
