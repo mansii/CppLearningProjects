@@ -216,3 +216,35 @@ void MyLine::draw()
   glVertex2f(mLx2, mLy2);
   glEnd();
 }
+
+
+
+ Stickman::Stickman(MyCircle _chead, MyLine _ltorso, MyLine _llefthand, MyLine _lrighthand, MyLine _lleftleg, MyLine _lrightleg)
+{
+
+ mHead = _chead;
+ mTorso = _ltorso;
+ mLefthand = _llefthand;
+ mRighthand = _lrighthand;
+ mLeftleg = _lleftleg;
+ mRightleg =_lrightleg;
+
+ printf("\nCalling stickman constructor");
+
+} 
+ 
+ 
+ Stickman::~Stickman()
+{
+  printf("\nCalling stickman destructor");
+
+}
+
+void Stickman::draw()
+{
+  //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+  //glLoadIdentity();
+  glTranslatef(0, 0, 0);
+
+ 
+}

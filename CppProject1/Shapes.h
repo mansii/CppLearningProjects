@@ -82,14 +82,24 @@ private:
 };
 
 
-/*class Stickman :public Shape
+class Stickman :public Shape
 {
 public:
-  Stickman(){}
+  Stickman(MyCircle _chead, MyLine _ltorso, MyLine _llefthand, MyLine _lrighthand, MyLine _lleftleg, MyLine _lrightleg);
   virtual ~Stickman(){}
   virtual void draw(){}
 
-};*/
+
+private:
+  MyCircle mHead;
+  MyLine mTorso;
+  MyLine mLefthand;
+  MyLine mRighthand;
+  MyLine mLeftleg;
+  MyLine mRightleg;
+
+
+};
 
 class MyLine : public Shape
 {

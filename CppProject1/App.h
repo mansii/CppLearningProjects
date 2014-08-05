@@ -21,18 +21,20 @@ private:
   void draw();
   void processKeyboard(unsigned char key, int mousePositionX, int mousePositionY);
 
- /* bool mShowRectangle;
+  bool mShowRectangle;
   MyRectangle* mR1;
 
-  bool mShowSquare;
+/* bool mShowSquare;
   MySquare* mS1;
 
   bool mShowTriangle;
   MyTriangle* mT1;*/
 
-  bool mShowCircle;
-  MyCircle* mC1;
- 
+/*  bool mShowCircleH;
+  MyCircle* mCH;
+
+  bool mShowCircleE1;
+  MyCircle* mCE1;
  
   bool mShowLine1;
   MyLine* mL1;
@@ -43,11 +45,14 @@ private:
   bool mShowLineK2;
   MyLine* mLK2;
 
-  bool mShowLineH1;
+  bool mShowLineH1; //hand
   MyLine* mLH1;
 
-  bool mShowLineH2;
-  MyLine* mLH2;
+  bool mShowLineH2;//hand
+  MyLine* mLH2;*/
+
+ bool mShowStickman;
+  Stickman* mS;
 
 
 

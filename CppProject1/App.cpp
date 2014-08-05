@@ -17,18 +17,21 @@ App& App::Instance()
 App::App()
 {
  /* bool mShowTriangle = false;
-  mT1 = new MyTriangle(0.4, 0.5, 0.2, 0.4);
+  mT1 = new MyTriangle(0.4, 0.5, 0.2, 0.4);*/
 
   bool mShowRectangle = false;
-  mR1 = new MyRectangle(0.6, 0.2, 0.3, 0.6);
+  mR1 = new MyRectangle(0.5, 0.6, 0.1, 0.01);
 
-  bool mShowSquare = false;
+/*  bool mShowSquare = false;
   mS1 = new MySquare(0.2, 0.2, 0.3);*/
 
-  bool mShowCircle = false;
-  mC1 = new MyCircle(0.5, 0.66, 0.06);
+ // bool mShowCircleH = false;
+  //mHead = new MyCircle(0.5, 0.66, 0.06);
 
-  bool mShowLine1 = false;
+  /*bool mShowCircleE1 = false;
+  mCE1 = new MyCircle(0.3, 0.08, 0.06);*/
+
+/*  bool mShowLine1 = false;
   mL1 = new MyLine(0.5f, 0.25f, 0.35, 90, false);
 
   bool mShowLineK1 = false;
@@ -41,7 +44,11 @@ App::App()
   mLH1 = new MyLine(0.5f, 0.45f, 0.09, 45, false);
 
   bool mShowLineH2 = false;
-  mLH2 = new MyLine(0.5f, 0.45f, 0.09, 135, false);
+  mLH2 = new MyLine(0.5f, 0.45f, 0.09, 135, false);  */
+
+  bool mShowStickman = false;
+  mS = new Stickman
+
 
   printf("Calling app constructor");
 
@@ -52,7 +59,8 @@ App::~App()
   /*delete mT1;
   delete mR1;
   delete mS1;*/
-  delete mC1;
+  delete mCH;
+ // delete mCE1;
   delete mL1;
   delete mLK1;
   delete mLK2;
@@ -89,16 +97,19 @@ void App::draw()
 {
 
  /* if (mShowTriangle)
-    mT1->draw();
+    mT1->draw();*/
 
   if (mShowRectangle)
     mR1->draw();
 
-  if (mShowSquare)
+ /* if (mShowSquare)
     mS1->draw();*/
 
-  if (mShowCircle)
-    mC1->draw();
+  if (mShowCircleH)
+    mCH->draw();
+
+ /* if (mShowCircleE1)
+    mCE1->draw();*/
 
   if (mShowLine1)
     mL1->draw();
@@ -137,10 +148,11 @@ void App::processKeyboard(unsigned char key, int mousePositionX, int mousePositi
 
   case 'x':
   {
-          /*  mShowTriangle = false;
+         //  mShowTriangle = false;
             mShowRectangle = false;
-            mShowSquare = false;*/
-            mShowCircle = false;
+          //  mShowSquare = false;
+            mShowCircleH = false;
+           // mShowCircleE1 = false;
             mShowLine1 = false;
             mShowLineK1 = false;
             mShowLineK2 = false;
@@ -151,16 +163,19 @@ void App::processKeyboard(unsigned char key, int mousePositionX, int mousePositi
   } break;
 
 /*  case 't': mShowTriangle = true;
-    break;
+    break; */
 
   case 'r':  mShowRectangle = true;
     break;
 
-  case 's':  mShowSquare = true;
+/*  case 's':  mShowSquare = true;
     break;*/
 
-  case 'c':  mShowCircle = true;
+  case 'c':  mShowCircleH = true;
     break;
+
+ /* case 'e':  mShowCircleE1 = true;
+    break;*/
 
   case 'l': mShowLine1 = true;
     break;
