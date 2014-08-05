@@ -85,18 +85,22 @@ private:
 class Stickman :public Shape
 {
 public:
-  Stickman(MyCircle _chead, MyLine _ltorso, MyLine _llefthand, MyLine _lrighthand, MyLine _lleftleg, MyLine _lrightleg);
+  Stickman(float _x, float _y, float  _length);
   virtual ~Stickman(){}
   virtual void draw(){}
 
 
 private:
-  MyCircle mHead;
-  MyLine mTorso;
-  MyLine mLefthand;
-  MyLine mRighthand;
-  MyLine mLeftleg;
-  MyLine mRightleg;
+  MyCircle* mHead;
+  MyLine* mTorso;
+  MyLine* mLefthand;
+  MyLine* mRighthand;
+  MyLine* mLeftleg;
+  MyLine* mRightleg;
+
+  float mX;
+  float mY;
+  float mLength;
 
 
 };

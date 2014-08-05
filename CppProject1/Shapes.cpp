@@ -218,16 +218,35 @@ void MyLine::draw()
 }
 
 
-
- Stickman::Stickman(MyCircle _chead, MyLine _ltorso, MyLine _llefthand, MyLine _lrighthand, MyLine _lleftleg, MyLine _lrightleg)
+// Set / initilaize all unallocated member variables to nullptr in the beginning of the constructor
+Stickman::Stickman(float _x, float _y, float  _length) :
+mHead(nullptr),
+mTorso(nullptr),
+mLefthand(nullptr),
+mRighthand(nullptr),
+mLeftleg(nullptr),
+mRightleg(nullptr)
 {
+  mX = _x;
+  mY = _y;
+  mLength = _length;
 
- mHead = _chead;
- mTorso = _ltorso;
- mLefthand = _llefthand;
- mRighthand = _lrighthand;
- mLeftleg = _lleftleg;
- mRightleg =_lrightleg;
+
+  // TODO: Calculate cX, cY, and cR correctly
+  float cX = mX + mY / 2;
+  float cY = mY;
+  float cR = mX + mY / 2;
+  mHead = new MyCircle(cX, cY, cR);
+
+  // TODO: Calculate torsoX, torsoY, torsoLength, torsoAngle correctly
+  float torsoX = mX;
+  float torsoY = mY;
+  float torsoLength = mLength;
+  int torsoAngle = 90;
+
+  mTorso = new MyLine(torsoX, torsoY, torsoLength, torsoAngle);
+
+ // TODO: Do hands and legs...
 
  printf("\nCalling stickman constructor");
 
@@ -236,15 +255,29 @@ void MyLine::draw()
  
  Stickman::~Stickman()
 {
+   // Clean up becasue you have new-ed in the constructor
+   if (mHead != nullptr)
+   {
+     delete mHead;
+     mHead = nullptr;
+   }
+
+   // TODO: Do torso hands and legs
   printf("\nCalling stickman destructor");
 
 }
 
-void Stickman::draw()
-{
-  //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-  //glLoadIdentity();
-  glTranslatef(0, 0, 0);
+ void Stickman::draw()
+ {
+   // You will just draw lik e this..
+   // SInce they are pointeres, it is a good practice to check if they are null
+   // before using them
 
- 
-}
+   if (mHead)  // This is equivalent to saying if (mHead != nullptr)
+     mHead->draw();
+
+   if (mTorso != nullptr)
+     mTorso->draw();
+
+   // TODO: Hands and  lleegs
+ }
